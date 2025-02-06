@@ -24,3 +24,9 @@ GIT STASH: stash is used to save the uncommitted changes to a temporary storage 
     $ git stash pop     : pop the top-most stach only if nothing is to be staged. It can lead to a conflict so, the operation is aborted
     $ git stash list    : getting all the stashed
     $ git stash -u      : also stashed untracked files
+
+
+---------------------
+
+Query: How does git calculates difference? 
+Answer: 

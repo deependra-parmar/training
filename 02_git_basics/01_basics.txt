@@ -49,3 +49,7 @@ GIT PUSH: Git push command transfers or upload local repository content to remot
 
 Query: Why git is the most popular VCS?
 Answer: 
+    1. Highly flexible: features like branching can help developers collaborate on a single codebase with abstraction.
+    2. Git is fast in nature as it operates at local level
+    3. Multiple backups as different developers are working on their own copies.
+    4. Highly collaborative due to its branching model
