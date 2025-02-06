@@ -1,0 +1,26 @@
+GIT DIFF: Git diff is used to see difference between two commits. 
+
+    $ git diff <hash1> <hash2>
+
+--------------------
+
+GIT LOG: Used to list the log of the commits done till now. Contains SHA Code or commit code, Author, Date and commit message.
+
+    $ git log 
+    $ git log --oneline             : with short SHA, pointes and commit messages
+    $ git shortlog                  : with just commit messages under user-name 
+    $ git log --graph               : gives log in the form of timeline
+
+--------------------
+
+GIT REVERT: to revisit
+
+--------------------
+
+GIT STASH: stash is used to save the uncommitted changes to a temporary storage when you want to change the working branch or change context and don't want to unnecessarily create a commit.
+
+    $ git stash         : in order to stash the changes
+    $ git stash apply   : apply the top stash and reapply the changes
+    $ git stash pop     : pop the top-most stach only if nothing is to be staged. It can lead to a conflict so, the operation is aborted
+    $ git stash list    : getting all the stashed
+    $ git stash -u      : also stashed untracked files
