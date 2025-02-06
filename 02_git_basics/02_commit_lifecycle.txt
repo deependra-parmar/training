@@ -1,0 +1,54 @@
+A change in the codebase need to go from three different stages in the process of versioning.
+
+Local Change        --------> Staging Area          -----------> Commit and capture
+
+
+GIT STATUS: This commands gives the current status of the repository. Red changes are not yet staged and changes in green are staged and are ready to commit 
+
+    $ git status 
+
+---------------------
+
+GIT ADD: This commands adds the changes made in the local repository in the staging area. Although, it doesn't make any significant change in the repository. Its a way to make sure that the content in staging area is ready for next commit and save.
+
+    $ git add <file_name>
+    $ git add <dir_name>
+    $ git add .                 : adds everything that is changed to staging area
+    $ git add -p                : add all changes to staging area for next commit
+
+---------------------
+
+GIT COMMIT: Commit command is used to captures the snapshot of the repository's current state. Once you have staged the changes, you are ready to commit.
+Git literally takes snapshots that is it keeps tracks of files and their states at a current commit in the form of different type of objects like commit object, tree object, blob object, etc.
+GIT DOESN'T TRACK DIFFERENCES
+
+    $ git commit -m "<commit_message>"
+    $ git commit -a                     : stage all changes and open an editor for commit_message
+    $ git commit -am "<commit_message>"
+    
+    In case, you want to edit the last commit and add something, you can be like
+    
+    $ git add <file_name>
+    $ git commit --amend       : doesn't create a new commit but update the last
+
+---------------------
+
+GIT RM: Rm or remove command is used to unstage a file or directory from staging area. Its invert of git add
+
+    $ git rm <file_name>
+    $ git rm <dir_name>
+    $ git rm dir/\*.txt         : remove all txt files in dir from staging area
+
+----------------------
+
+GIT RESET: Git reset command is used to change the HEAD to a specific commit or state. Whenever you want to go to previous version of codebase, you can use reset
+
+When you do git checkout, only the HEAD points to the updated state but when reset is performed, both the HEAD and branch refs are moved to specific commit. This result in loosing the contact from later commit and the link breaks.
+
+    $ git reset <commit_hash>       : default --soft
+    $ git reset --soft <commit_hash>
+    $ git reset --hard <commit_hash>
+
+----------------------
+
+Query: What is SHA Hash?

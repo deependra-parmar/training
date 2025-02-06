@@ -1,0 +1,51 @@
+Git is a Version Control System which is used to record changes to a file, directory or codebase overtime.
+
+GIT INIT: In order to enable git to start recording the version, you have to initialise the git repo
+
+    $ git init              : in the directory to initialise the directory as local git repo
+
+----------------------
+
+GIT CONFIG: Git config is used to set the user credential in the form of key-value pairs and let your repository know who your are and identify yourself.
+
+Config can be set at three different levels
+    1. --local: local or repo level. Makes changes to .git/config
+    2. --global: user-level
+    3. --system: system-level
+
+    $ git config --local user.name = "<user_name>"
+    $ git config --local user.email = "<user_email>"
+    $ git config --global core.editor = "code --wait"
+
+
+----------------------
+
+GIT CLONE: Git clone command is used to enable collaborative development. You can get a copy of a remote repository into your system.
+
+    $ git clone <repo_url> <dir_name>
+    $ git clone --branch <repo_url> <dir_name>      : clone the branch HEAD is pointing to
+
+----------------------
+
+GIT FETCH: Git fetch command update the local repository with the changes of the remote repository but doesn't merge the changes.
+
+    $ git fetch <remote_url>
+
+----------------------
+
+GIT PULL: Git Pull command is combination of fetch and merge. It will fetch the latest changes from the remote repository and also merge them into the local copy and then, create a local merge commit and head is pointed to it.
+
+    $ git pull <remote_url>
+    $ git pull --no-commit <remote>         : local merge commit is not created
+
+----------------------
+
+GIT PUSH: Git push command transfers or upload local repository content to remote repository.
+
+    $ git push <remote> <branch>
+
+
+----------------------
+
+Query: Why git is the most popular VCS?
+Answer: 
