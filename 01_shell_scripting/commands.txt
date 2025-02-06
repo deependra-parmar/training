@@ -1,0 +1,91 @@
+General syntax of shell commands: COMMAND options ARGUMENTS
+
+1. ls: List command
+
+    $ ls            : list all files and directories in the pwd
+    $ ls -a         : list all hidden files too
+    $ ls -l         : gives long listing with timestamps and permission
+
+
+2. mkdir: Make directory command
+
+    $ mkdir <dir_name>         : making a directory in pwd if not exists
+    $ mkdir -p <dir_name>      : making directory even if exists without error
+    $ mkdir -p dir1/dir2/dir2  : making directories recursively in one another
+
+
+3. cat command: used to create a new file with content or read the content of it.
+
+    $ cat >> file_name.extension            : creates and reads input
+    $ cat file_name.extension               : reads file with file dir_name
+
+
+4. ps command: process status command for listing all processes
+
+    $ ps           : prints all running processes with their ids and timestamps
+
+
+5. kill command: used for manual termination of a process using a pid or port number
+
+    $ kill <pid>        : kills the process with that pid
+    $ kill -9 $(lsof -i :<port_number> -t)  : alias return the port number where the process is running and killing it with -9 is a immediate hard termination signal code.
+
+
+6. lsof: list opened files command is used to list which process is using which file with user, pid, etc. Used with grep for advanced searching and listing.
+
+    $ lsof          : list a large information chart of everything
+    $ lsof -i       : list pid, user, connection type of processes
+    $ lsof -t       : gives all port numbers engaged by processes
+
+
+7. netstat: network statistics command used to print information of the network,protocol, connections, their types, local and foreign addresses etc
+
+    $ netstat
+
+
+8. service: high-level command for service management. Relies on underlying service managers. Service uses the same underlying environment for service management.
+
+    $ sudo service script_name COMMAND
+
+
+9. systemctl: directly interacts with systemd despite init scripts and used for service management.
+
+    $ sudo systemctl service_name COMMAND
+
+
+10. Vim: Vim is free and open source, linux-based text editor
+
+11. Nano: Nano is minimalistic editor with most convinience.
+
+12. sudo: Super User Do is command used when you want to gain root user priviledges for performing few tasks like installing packages, running scripts, etc without logging as root user
+
+13. sudo su: sudo switch user or sudo substitute user is used to perform admin tasks on the behalf of another user. Password of user will be required.
+
+14. apt and apt-get: Advanced Package Tools, both are CLI-based package management tools for Debian-based linux systems. apt is generally more user-friendly than apt-get
+
+15. apt-get update: used to refresh the list of packages with the latest versions available on the software repositories.
+
+16. apt-get upgrade: used to fetch the latest version of packages after update.
+
+17. Adding a new user to the system: 
+
+    $ sudo useradd test         : useradd -> command not found in macOS
+
+18. If mkdir gives error that directory already exists then, use -p for forced creation
+
+    $ mkdir -p <existing_dir_name>
+
+19. .bashrc: Bash Read Command is a configuration file which get executed whenever an interactive bash starts. It contains configs, functions for customizing shell experience and automate tasks.
+
+20. For printing out all env variables, just run 
+
+    $ printenv
+
+21. For adding a new variable in the system, perform
+
+    $ VARNAME = "varvalue"
+    $ export $VARNAME
+
+22. Shell Scripting: Way of automating tasks, performing tests and checks and increase efficiency. It has all features that of a programming language like variables, operators, conditionals, loops, etc for achieving this.
+
+23. 
