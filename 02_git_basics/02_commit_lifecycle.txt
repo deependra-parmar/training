@@ -45,9 +45,9 @@ GIT RESET: Git reset command is used to change the HEAD to a specific commit or 
 
 When you do git checkout, only the HEAD points to the updated state but when reset is performed, both the HEAD and branch refs are moved to specific commit. This result in loosing the contact from later commit and the link breaks.
 
-    $ git reset <commit_hash>       : default --soft
-    $ git reset --soft <commit_hash>
-    $ git reset --hard <commit_hash>
+    $ git reset --mixed <commit_hash>       : default --mixed, shifts the pointer and unstage the changes
+    $ git reset --soft <commit_hash>        : shifts the pointer, remaining the changes staged
+    $ git reset --hard <commit_hash>        : shifts the pointer and removes the changes (⚠️ DESTRUCTIVE)
 
 ----------------------
 
