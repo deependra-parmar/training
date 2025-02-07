@@ -49,6 +49,12 @@ tail -n 50 sample.txt
 touch -f prog1.txt prog2.txt program.txt code.txt info.txt
 
 # 14. files with "prog" in their names
+find . -type f -name "*prog*"
+
+# 15. Creating an alias for the above file
+echo ""
+alias findalias="find . -type f -name \"*prog*\""
+findalias
 
 
 : '
