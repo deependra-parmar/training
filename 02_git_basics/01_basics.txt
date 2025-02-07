@@ -43,7 +43,15 @@ GIT PULL: Git Pull command is combination of fetch and merge. It will fetch the 
 GIT PUSH: Git push command transfers or upload local repository content to remote repository.
 
     $ git push <remote> <branch>
+    $ git push -u <remote> <branch>         : set default upstream for push
 
+
+----------------------
+
+GIT REMOTE: Git remote command is used to add and manage the remote url of the repository. You can have multiple remote origins.
+
+    $ git remote -v             : show fetch and push remote urls
+    $ git remote add <alias_for_remote> <remote>        : add remote url to local repository
 
 ----------------------
 
