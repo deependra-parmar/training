@@ -1,0 +1,1 @@
+// What kind of data-structure JS Object is: Since, its a key-value pair datatype, its like hash-table, hashmap or dictionary in js
