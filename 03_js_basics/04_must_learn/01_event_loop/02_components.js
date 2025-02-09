@@ -24,6 +24,7 @@ firstFunction();
 2. Task Queue: Task Queue in JS is responsible for handling all the async tasks, once they are ready to be executed. 
 Tasks persists in the task queue until the call stack is empty which means that async tasks will start their execution once the sync tasks are done. 
 Once the call stack is empty, the Event Loop tasks from the task queue to call stack one at a time for execution.
+Works on FIFO basis.
 */
 
 setTimeout(() => {
