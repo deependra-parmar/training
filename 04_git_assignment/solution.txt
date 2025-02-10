@@ -1,0 +1,145 @@
+1. Creating a private github repository with name "i-am-a-git-noob"
+
+    $ gh repo create deependra-parmar/i-am-a-git-noob --private 
+
+
+------------------
+
+2. Create a local repository in empty directory: a new .git respository is seen in the directory which will track the changes you are going to make in the working directory
+
+    $ git init
+
+------------------
+
+3. Point remote of your local git repo to the newly created repo on github 
+
+    $ git remote add origin https://github.com/deependra-parmar/i-am-a-git-noob
+
+------------------
+
+4. Print current git configs on the terminal
+
+    $ git config --list
+
+------------------
+
+5. Update git config with your name and email
+
+    $ git config --local user.name "deependra-parmar"
+    $ git config --local user.email "dparmar@qodeleaf.com"
+
+------------------
+
+6. Create a file named test1.txt
+
+    $ touch test1.txt
+
+------------------
+
+7. Added line with text "first line in file" in "test1.txt".
+
+------------------
+
+8. Push this file to remote github
+
+    $ git add file1.txt
+    $ git commit -m "Add first file"
+    $ git push -u origin main
+
+------------------
+
+9. Append second line in the file 
+
+------------------
+
+10. Add file to staging area
+
+    $ git add test1.txt
+
+------------------
+
+11. Check the status of the file in the staging area
+
+    $ git status
+
+------------------
+
+12. Add third line in the file
+
+------------------
+
+13. Remove file from staging area
+
+    $ git rm --cached -f file1.txt
+
+------------------
+
+14. Create commit with message "My First Commit"
+
+    $ git add .
+    $ git commit -m "My First Commit"
+
+------------------
+
+15. Push the file to github
+
+    $ git push
+
+------------------
+
+16. Update message of the last commit "My First Commit" to "My Second Commit" (without creating a new commit )
+
+    $ git commit --amend
+
+-----------------
+
+17. Push commit with updated message to remote repo
+
+    $ git push -f origin main
+
+-----------------
+
+18. Check the difference between last and second last commit.
+
+    $ git diff HEAD^ HEAD
+
+-----------------
+
+19. Revert the last commit and check the updated commit history logs
+
+    $ git revert HEAD
+    $ git log
+
+-----------------
+
+20. Append fourth line in the file
+
+-----------------
+
+21. Update the last commit such that the "test1.txt"  also contains "Fifth line in file" (without creating a new commit)
+
+    $ 
+
+------------------
+
+22. Push the updated commits to remote repository
+
+    $ git push
+
+------------------
+
+23. Append some more lines in test1.txt
+
+------------------
+
+24. Pull all the content from the remote repository to the local repository
+
+    $ git pull
+
+------------------
+
+25. Clone the repository to some other directory in your local system
+
+    $ git clone https://github.com/deependra-parmar/i-am-a-git-noob
+
+------------------
