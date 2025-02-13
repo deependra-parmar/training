@@ -1,13 +1,10 @@
 try{
-    // throw new TypeError("This is the TypeError");
     setTimeout(() => {
-        console.log("Inside try");
-    }, 5000);
+        console.log("In the try");
+    }, 2000)
+
+    console.log("Deependra");
 }
-catch({name, message}){
-    console.log(name);
-    console.log(message);
-}
-finally{
-    console.log("Finally")
+catch(error){
+    console.log(error.message);
 }

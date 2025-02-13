@@ -126,7 +126,7 @@
 
 22. Push the updated commits to remote repository
 
-    $ git push
+    $ git push -f origin main
 
 ------------------
 
