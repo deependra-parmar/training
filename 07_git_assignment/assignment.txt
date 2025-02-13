@@ -1,0 +1,77 @@
+1. Initialize a local repository and name the base folder as ‘basic_training’
+
+    $ git init 
+
+------------------
+
+2. Set your local configs (Name and Email).
+
+    $ git config --local user.name "deependra-parmar"
+    $ git config --local user.email "dparmar@qodeleaf.com"
+
+------------------
+
+3. Create a file named README.md inside this folder.
+
+    $ touch README.md
+
+------------------
+
+4. Create a fresh commit in the master branch named ‘Initial Commit’ containing only the created README.md file.
+
+    $ git add .
+    $ git commit -m "Initial Commit"
+
+-----------------
+
+5. You need to create a repository on github ‘basic_training’.
+
+    $ gh repo create deependra-parmar/basic_training --public
+
+-----------------
+
+6. Set remote on your local repository to the new repository on github.
+
+    $ git remote add origin https://github.com/deependra-parmar/basic_training.git
+
+-----------------
+
+7. Pushing changes to remote repo
+
+    $ git push -u origin main
+
+-----------------
+
+8. Add your buddies(primary and secondary) and mentors to your repository as a ‘Maintainer’.
+
+    $ added both of them as collaborator
+
+-----------------
+
+9. Create a branch from the master named ‘assignment-X’, where X indicates the assignment number in the order that you received in daily Emails.
+
+    $ git branch assignment-05
+    $ git checkout assignment-05
+
+------------------
+
+10. Create questions.md and put in all questions
+
+    $ touch questions.md
+
+------------------
+
+11. Create a assignment solution text file and push it to the branch
+
+    $ touch assignment.txt 
+
+------------------
+
+12. Push all changes to remote repository
+
+    $ git add .
+    $ git commit -m "Assignment"
+
+------------------
+
+13. Create a PR from assignment-05, to be merged to main and reviewed by buddies and mentors.

@@ -1,0 +1,14 @@
+GIT BRANCH: Branching means you diverge from the main line of development and continue to do work without messing with that main line. 
+
+    $ git branch feature        : creating a branch feature
+    $ git switch feature        : for switching to feature
+    $ git checkout feature      : for checkout to feature or switch to feature
+    $ git switch -c test        : creates and switch to test
+    $ git branch -d test        : deletes test branch
+
+
+-----------------
+
+GIT MERGE: Merging means that you have to merge that changes that you have made to the other branch to the main, resulting in bringing the code 
+
+    $
