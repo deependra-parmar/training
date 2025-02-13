@@ -1,0 +1,37 @@
+1. What exactly does a branch mean? Is a branch a set of commits? Or is it a pointer?
+- Git branch is nothing but a light-weight movable pointer to one of the commit. As we keep committing to the branch, the pointer moves forward to the current or most recent commit.
+
+----------------------------
+
+2. Can we add more than one commit to a tag?
+- No, one tag can only be assigned to one commit. Multiple commits cannot be tagged together.
+
+----------------------------
+
+3. What is a Conflict?
+- A conflict is basically the clash the occurs when you try to an operation tries to write same file location like line with different values.
+
+----------------------------
+
+4. What changes for a commit when you rebase or merge?
+- Merging will lead to a merge commit while rebasing will re-write the history and change the reference to get the last code from the expected branch.
+
+----------------------------
+
+5. ~ : used to go back in the generation linearly.
+   ^ : used to merge commits where a commit can have more than 1 parent.
+
+----------------------------
+
+6. What is branching strategy? Why should we create a feature branch?
+- Helps implement seperation of concern
+- Parallel development
+- Fosters collaboration
+- Helps keeping the main code-base safe
+
+----------------------------
+
+7. What is the responsibily of the team member when you are working with multiple team members?
+- Keep the main codebase intact and safe
+- Create a different working branch and work only on it
+- Proper review of the code before merging to main

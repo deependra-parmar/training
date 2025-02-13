@@ -1,0 +1,42 @@
+GIT BRANCH: Branching means you diverge from the main line of development and continue to do work without messing with that main line. 
+
+    $ git branch feature        : creating a branch feature
+    $ git switch feature        : for switching to feature
+    $ git checkout feature      : for checkout to feature or switch to feature
+    $ git switch -c test        : creates and switch to test
+    $ git checkout -b test      : creates a test branch and switch to it
+    $ git branch -d test        : deletes test branch
+
+-----------------
+
+GIT CHECKOUT: Checkout is a multi-purpose command. Git checkout is used to create and switch between branches, time travel between commits and files
+
+    $ git checkout -b <branch_name>         : creates and switch to branch
+    $ git checkout <branch_name>            : switch to branch
+    $ git checkout <commit>                 : helps you travel to part. commit
+
+-----------------
+
+GIT MERGE: Merging means that you have to merge that changes that you have made to the other branch to the main, resulting in bringing the code. 
+Stay on the branch on which you want to merge another branch
+
+    $ git checkout main
+    $ git merge test
+
+------------------
+
+GIT CHERRY-PICK: git cherry-pick is a powerful command that enables arbitrary Git commits to be picked by reference and appended to the current working HEAD. Cherry picking is the act of picking a commit from a branch and applying it to another. git cherry-pick can be useful for undoing changes. For example, say a commit is accidently made to the wrong branch. You can switch to the correct branch and cherry-pick the commit to where it should belong.
+
+
+------------------
+
+GIT TAGS: Git has the ability to tag specific points in a repository’s history as being important.
+
+    $ git tag --list                    : lists all the tags
+    $ git show <tag>                    : show commit info with that tag
+    $ git tag v1.0.0 <commit>           :  tag v1.0.0 to commit
+    $ git tag -a v1.0.1 -m "Message"    : Annotated tag to HEAD with metadeta & msg
+    $ git tag -d v1.0.0 v1.0.1          : delete specified tags
+
+-------------------
+
