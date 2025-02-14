@@ -4,6 +4,8 @@ var player2;
 var playerMarks1 = [];
 var playerMarks2 = [];
 
+var isResultOut = false;
+
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
@@ -11,14 +13,14 @@ const winPatterns = [
     [1, 4, 7],
     [2, 4, 6],
     [2, 5, 8],
-    [3, 4, 5], 
+    [3, 4, 5],
     [6, 7, 8]
 ]
 
 var turn = true; // player 1 will start
 
 
-const getNames = function() {
+const getNames = function () {
     player1 = document.getElementById("player1");
     player2 = document.getElementById("player2");
 
@@ -30,14 +32,15 @@ const getNames = function() {
 getNames();
 
 const announceResult = (player) => {
+    isResultOut = true;
     const winnerName = player === 0 ? "Player 1" : "Player 2";
     document.querySelector(".result").classList.add('show');
     document.querySelector(".message").classList.add('show');
-    
-    if(player == -1){
+
+    if (player == -1) {
         document.querySelector(".message").innerText = `Match Draw 😔`
     }
-    else{
+    else {
         document.querySelector(".message").innerText = `${winnerName} Won 🥳`
     }
 
@@ -57,6 +60,7 @@ const reset = () => {
         cell.disabled = false;
     })
     turn = true;
+    isResultOut = false;
 }
 
 const show = () => {
@@ -69,20 +73,19 @@ const hide = () => {
     reset();
 }
 
-const checkWin = function(array, player){
+const checkWin = function (array, player) {
     winPatterns.forEach((win) => {
-        let matchCount = 0;
+        var matchCount = 0;
 
-        for(let i=0; i<array.length; i++){
-            if(win.includes(array[i]))
+        for (let i = 0; i < win.length; i++) {
+            if (array.includes(win[i]))
                 matchCount++;
-            
-            if(matchCount == 3){
+
+            if (matchCount == 3) {
                 console.log("Announcing result")
                 announceResult(player);
                 break;
             }
-                
         }
     })
 }
@@ -92,9 +95,8 @@ let cells = document.querySelectorAll(".cell");
 cells.forEach((cell) => {
     cell.addEventListener('click', () => {
         const cellNum = parseInt(cell.getAttribute('value'));
-        console.log(cellNum, typeof cellNum);
-        
-        if(turn){
+
+        if (turn) {
             cell.innerHTML = '<i class="fa-solid fa-xmark"></i>';
             playerMarks1.push(cellNum);
             playerMarks1.sort();
@@ -107,10 +109,10 @@ cells.forEach((cell) => {
 
             // checking win of player 1 only if plays >= 3
 
-            if(playerMarks1.length >= 3)
+            if (playerMarks1.length >= 3)
                 checkWin(playerMarks1, 0);
         }
-        else{
+        else {
             cell.innerHTML = '<i class="fa-regular fa-circle"></i>';
             playerMarks2.push(cellNum)
             playerMarks2.sort();
@@ -124,14 +126,15 @@ cells.forEach((cell) => {
 
             // checking win of player 2 only if plays >= 3
 
-            if(playerMarks2.length >= 3)
+            if (playerMarks2.length >= 3)
                 checkWin(playerMarks2, 1);
         }
 
         turn = !turn;
         cell.disabled = true;
-        
-        if(playerMarks1.length + playerMarks2.length == 9)
+
+        if (playerMarks1.length + playerMarks2.length == 9 && !isResultOut) {
             announceResult(-1);
+        }
     })
 })
