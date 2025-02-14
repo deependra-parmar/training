@@ -1,3 +1,6 @@
+var beep = new Audio("./beep.wav");
+var success = new Audio("./success.mp3");
+
 var player1;
 var player2;
 
@@ -32,6 +35,7 @@ const getNames = function () {
 getNames();
 
 const announceResult = (player) => {
+    success.play();
     isResultOut = true;
     const winnerName = player === 0 ? "Player 1" : "Player 2";
     document.querySelector(".result").classList.add('show');
@@ -94,6 +98,7 @@ let cells = document.querySelectorAll(".cell");
 
 cells.forEach((cell) => {
     cell.addEventListener('click', () => {
+        beep.play();
         const cellNum = parseInt(cell.getAttribute('value'));
 
         if (turn) {
