@@ -66,5 +66,3 @@ console.log(total);
 
 // map: run callback on each element and returns new list
 console.log(arr.map(a => a*2));
-
-// 
