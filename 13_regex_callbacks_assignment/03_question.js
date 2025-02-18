@@ -25,4 +25,3 @@ console.log();
 console.log(`${discNumber} for Discover validation returns: `, discovRegEx.test(discNumber));
 console.log(`${amexNumber} for Discover validation returns: `, discovRegEx.test(amexNumber));
 console.log();
-
