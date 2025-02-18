@@ -47,3 +47,14 @@ console.log(str2.match(wordRegex2)); // returns character before space
 console.log(str2.match(wordRegex3));
 console.log(str2.match(wordRegex4));
 console.log(str2.match(wordRegex5));
+
+
+// DOT (.): matches any character except newline
+const dotRegex1 = /./g
+const dotRegex2 = /^[A-Z]/
+const dotRegex3 = /\w$/
+const str3 = "Hello \n I am good \n How are you? \n I hope you are fine"
+
+console.log(str3.match(dotRegex1)); // all characters except newline
+console.log(str3.match(dotRegex2)); // starting uppercase character
+console.log(str3.match(dotRegex3)); // ending character
