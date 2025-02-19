@@ -1,3 +1,24 @@
+/**
+ Implement a javascript Array having the following prototype functions without using Native javascript array:
+
+- push
+
+- pop
+
+- shift
+
+- unshift
+
+- length
+
+- splice
+
+- indexOf
+
+- forEach
+ */
+
+
 function CustomArray() {
     this.items = [];
 }
