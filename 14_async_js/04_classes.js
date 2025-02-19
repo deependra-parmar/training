@@ -2,7 +2,11 @@
     Class: Classes server as functions in JS, ultimately classes are objects because all functions are also objects in JS. So, class is like a special function in JS.
     Class is Just a SYNTACTIC SUGAR on the top of JS's old prototypal inheritance. 
 
+    ES6 provides a more better syntax to define Constructor Function using class keyword.
+
     Constructor: Used to create/instantiate an object of a class with initial values. Good thing about constructor in JS is that a class can have only one constructor.
+
+    Super(): method used to invoke the constructor of the parent class and set properties of it.
 
     You can't instantiate a class without new keyword
 
