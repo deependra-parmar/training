@@ -1,0 +1,26 @@
+1. Why JS is called a scripting language?
+- It is called as scripting language because it is used to directly provide the set of instructions/action (script) to the browser and need not any type of conversion/compilation for execution.
+- JS is directly interpreted by the browser that's why its light weight nature helps achieve the lightening-fast speed.
+
+--------------------------
+
+2. Mutability in Strings
+- Strings are immutable in nature which means that once created, their value cannot be changed. The operation that we perform can seem like changing the value but ultimately it creates a new value out of it. 
+
+- Strings are stored in string pools and Interning is used for efficient memory management. 
+
+let str = 'hello'   ----> still present in memory
+str = 'hello world' ----> now, str points to 'hello world'
+
+---------------------
+
+3. How callback of setTimeOut() is executed in Event Loop?
+
+---------------------
+
+4. Prototype and __proto__ in JS: 
+
+- Object is the built-in constructor function and the top-level global object that helps us create and manipulate objects. 
+- Prototype is the top-level prototype of the global Object. This is the prototype from which, all the objects inherits the properties.
+- __proto__ is the internal prototype of the Object constructor function.
+
