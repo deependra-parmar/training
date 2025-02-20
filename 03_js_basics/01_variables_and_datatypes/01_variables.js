@@ -25,6 +25,7 @@ const c = 1;
     console.log("a in block: ", a);
     console.log("x in block: ", x);
     console.log("c in block: ", c);
+    
 }
 
 console.log(x, a, c)

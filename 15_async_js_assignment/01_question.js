@@ -6,7 +6,7 @@ function testNum(num){
             resolve("Number is greater than 10");
         else
             resolve("Number is less than 10");
-    })
+    });
 }
 
 testNum(1).then((response) => {

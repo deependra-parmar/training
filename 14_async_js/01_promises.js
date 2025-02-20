@@ -40,4 +40,4 @@ promise.then((user) => {
 })
 .finally(() => {
     console.log("FINALLY SAYS: The Promise is either resolved or rejected");
-})
+});

@@ -63,3 +63,8 @@ console.log(User.prototype);
 
 console.log("Type of class: ", typeof User); // gives function
 console.log("Type of object: ", typeof user, typeof user.returnUser()); // object object
+
+const user1 = new User("hey", "hey@gmail.com");
+const user2 = new User("world", "world@gmail.com");
+
+console.log(user1.returnUser === user2.returnUser);
