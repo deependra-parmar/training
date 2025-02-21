@@ -29,8 +29,27 @@ function takeNumber(num){
 }
 
 // takeNumber(num);
+/*
 num2 = 30;
 takeNumber(num2); // Var is defined but prints undefined;
 
 let num1 = 10;
 var num2 = 20;
+
+*/
+
+let b;
+b = 20;
+// console.log(a, b);
+
+var a = 10; // still be undefined due to hoisting. Its definition will be moved or tend to move while interpretation (for upper console.log())
+
+function print(){
+    a = 30;
+    let b = 10;
+
+    console.log(a, b);
+}
+
+console.log(a, b);
+print();

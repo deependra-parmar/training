@@ -39,7 +39,7 @@ const wordRegex1 = /\w/; // for first character
 const wordRegex2 = /\w\s/; // for character just before first space
 const wordRegex3 = /hello/; // checks for first occurence of hello
 const wordRegex4 = /[aeiou]/g; // all occurences of aeiou
-const wordRegex5 = /[A-Za-z]/
+const wordRegex5 = /[A-Za-z]/; 
 const str2 = "120 Times hello guys, I am good";
 
 console.log(str2.match(wordRegex1)); // returns first character found

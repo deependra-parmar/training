@@ -1,5 +1,5 @@
 /*
-    Most commonly used Flags in Regex:
+    Most commonly used Flags in Regex: Called as quantifiers
         g : for global search and return/check all occurences
         i : making the pattern searching case-insensitive
         m : enables multi-line search (goes beyond \n too)
