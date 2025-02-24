@@ -38,18 +38,44 @@ var num2 = 20;
 
 */
 
-let b;
-b = 20;
+// let b;
+// b = 20;
+// // console.log(a, b);
+
+// var a = 10; // still be undefined due to hoisting. Its definition will be moved or tend to move while interpretation (for upper console.log())
+
+// function print(){
+//     a = 30;
+//     let b = 10;
+
+//     console.log(a, b);
+// }
+
 // console.log(a, b);
+// print();
 
-var a = 10; // still be undefined due to hoisting. Its definition will be moved or tend to move while interpretation (for upper console.log())
+// -----------------------------
 
-function print(){
-    a = 30;
-    let b = 10;
+const a = 10;
+// a = 10; // cannot re-assign even with the same value.
 
-    console.log(a, b);
+// console.log(a); 
+
+// --------------------
+
+const obj = {
+    name: "Deependra Parmar",
+    age: 20,
+    introduce: function(){
+        console.log(`My name is ${this.name} and I am ${this.age} years old`);
+    }
 }
 
-console.log(a, b);
-print();
+obj.name = "Deependra"; // can change the value of property of const object
+obj.lastname = "Parmar";
+console.log("Last name of the user is: ", obj.lastname);
+obj.introduce();
+
+// Properties, variables and functions for a const object can be changed. Const doesn't mean that it will not change. It just means that variable identifier cannot be reassigned.
+
+// obj = "Hello"; -------> THIS LINE GIVES ERROR
