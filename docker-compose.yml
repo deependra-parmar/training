@@ -1,8 +1,31 @@
 version: '3.8'
 
 services:
-  postgres:
-    # TODO: Add here
-
   backend:
-    # TODO: add here
+      build: .
+      depends_on:
+        postgres:
+          condition: service_started
+          restart: true
+      ports:
+        - 3000:3000
+      environment:
+        - HOST=postgres
+        - POSTGRES_DB=mydatabase
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+
+  postgres:
+    image: postgres
+    ports: 
+      - 5432:5432
+    volumes: 
+      - db_volume:/var/lib/pgsql/data
+    restart: always
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  db_volume:
